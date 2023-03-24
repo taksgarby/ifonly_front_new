@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import Stock from './Stock';
-
+import { Link } from "react-router-dom";
 
 
 const StockList = ({  name, amount, currency }) => {
@@ -16,6 +17,9 @@ const StockList = ({  name, amount, currency }) => {
             .then((ifOnlyStocksData) => setIfOnlyStocks(ifOnlyStocksData));
     }, []);
 
+    const getIfOnlyStockById = (id) => {
+        ifOnlyStocks.find((ifOnlyStock) => ifOnlyStock.id === id);
+    }
 
   const StockList = styled.div `
     display: flex;
@@ -23,10 +27,19 @@ const StockList = ({  name, amount, currency }) => {
     justify-content: space-around;
     `
 
-    const stockComponents = ifOnlyStocks.map(stock => (
-      <Stock key={stock.id} stock={stock} name={name}  />
-    ));
+    // const stockComponents = ifOnlyStocks.map(stock => (
+    //   <Stock key={stock.id} stock={stock} name={name}  />
+    // ));
 
+    const stockComponents = ifOnlyStocks.map(stock => {
+        return (
+            <Stock key={stock.id} stock={stock} name={name}>
+                <Link to = '/result'>
+
+                </Link>
+            </Stock>
+        )
+    })
 
     const UserInfo = styled.div`
       font-family: 'Amatic SC', cursive;

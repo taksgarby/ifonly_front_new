@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom'
 
-const Result = ( { amount, currency, stock, name } ) => {
+const Result = (props) => {
 
+    const jimjimminy = props.whatUserWants;
 
+    const location = useLocation()
+    const { stock } = location.state
+  
+  
     const ResultBox = styled.div`
         width:80%;
         margin: auto;
@@ -38,16 +44,18 @@ const Result = ( { amount, currency, stock, name } ) => {
             <span>
                
                 <p>If you had only bought 
-                <KeyWordRed><strong> {currency} {amount} </strong></KeyWordRed>
+                <KeyWordRed><strong> {stock.currency} {stock.amount} </strong></KeyWordRed>
                 worth of 
                 <KeyWordBlue><strong>{stock.companyName} stock </strong></KeyWordBlue>
                 in <KeyWordBlue>{stock.minPriceDate}</KeyWordBlue> and sold it 
                 in <KeyWordBlue>{stock.maxPriceDate}</KeyWordBlue> ...
                 <br/>
                 You could have made 
-            
+            amount is {jimjimminy.amount}
+minPrice is {stock.minPrice}
+maxPrice is {stock.maxPrice}
 
-                <KeyWordRed><strong>{currency}  {Math.round(((amount/stock.minPrice)*stock.maxPrice - amount)*100)/100}</strong></KeyWordRed>
+                <KeyWordRed><strong>{stock.currency}  {Math.round(((stock.amount/stock.minPrice)*stock.maxPrice - stock.amount)*100)/100}</strong></KeyWordRed>
             </p>
           
             </span>

@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import StockList from './StockList';
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-const Form = () => {
+
+const InputForm = (props) => {
 
     const [name, setName] = useState('');  
     const [amount, setAmount] = useState('');
@@ -20,21 +25,33 @@ const Form = () => {
         setCurrency(evt.target.value);
       }
     
+      const navigate = useNavigate();
+
+
     const handleFormSubmit = (evt) => {
         evt.preventDefault();
 
         // if (amount && name){
         //       return <StockList name = {name} amount = {amount} currency = {currency} />
         //     }
-     
+        const userQueryData = {
+          userName: name,
+          amount: amount,
+          currency: currency
+        }
+
+        props.OnSaveUserQueryData(userQueryData);
+        console.log(userQueryData);
         setFormSubmitted(true);
+        // navigate('/welcome', {name, amount, currency});
   
      }
 
 
     return ( 
         <>
-         <form className='inputForm' onSubmit={handleFormSubmit}>
+        <Form onSubmit={handleFormSubmit}>
+ 
           <div class="form-grid-container">
           <div class="grid-item">
           <label htmlFor="name">Your Name:</label>
@@ -71,14 +88,14 @@ const Form = () => {
              <div class="grid-item"></div>
            <div class="grid-item">
            {/* <Link to="/welcome"><Button onClick={handleFormSubmit} text={"Submit"}></Button></Link> */}
-           <button type='submit'>Submit</button>
-      
+           <Button type='submit' variant = "primary">Submit</Button>
+           {/* <Link to="/result"><Button onClick={onClick} text={"If Only"}></Button></Link> */}
             </div>
             </div>
-        </form>
+            </Form>
        {formSubmitted && <StockList name={name} amount={amount} currency={currency}/>}
         </>
      );
 }
  
-export default Form;
+export default InputForm;

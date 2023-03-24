@@ -1,0 +1,18 @@
+.diagram img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+#diagram {
+   width: 80%;
+   height: 80%;
+}
+
+.modal-close-button {
+    padding-left: 40%;
+}
+
+.modal-open-button {
+    padding-top: 0.5rem;
+}
