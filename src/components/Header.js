@@ -10,16 +10,14 @@ const Header = () => {
         display: flex;
         flex-direction: row;
         margin: 0;
-        font-family: 'Roboto';
         justify-content: center;
-        font-size: 1.2rem;
-        padding:
+
         `
 
     return ( 
    
             <HeaderStyle>
-                <h2>If Only ...</h2>
+                <h2 className="text-3xl font-bold p-2">If Only ...</h2>
             </HeaderStyle>
 
      );
