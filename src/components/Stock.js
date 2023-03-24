@@ -31,7 +31,6 @@ const { id } = useParams()
   const CompanyName = styled.div `
     padding: 0.5rem;
     margin-top: 0.5rem;
-    color: Pet rock;
     font-size: 1.5rem;
   `
   const StockDetails = styled.div `
@@ -64,9 +63,13 @@ return (
            state= {{ stock: stock}}
           >
             {/* <Link to="/result"> */}
-            <Button text="click" /></Link>
+            {/* <Button text="click" /> */}
     {/* {showResult && <IfOnlyModal stock={stock} name={name} currency={currency} amount={amount}/>} */}
-
+    <button text="if only" 
+        className="text-white bg-orange-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+        font-medium rounded-lg text-sm w-24 sm:w-auto px-1 py-1 text-center dark:bg-blue-600 
+        dark:hover:bg-blue-700 dark:focus:ring-blue-800">If Only</button>
+        </Link>
   </StockItem>
 
 );

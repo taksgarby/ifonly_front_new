@@ -10,14 +10,14 @@ const Result = (props) => {
     const { stock } = location.state
   
   
-    const ResultBox = styled.div`
-        width:80%;
-        margin: auto;
-        padding: 10px;
-        background-color: lightgrey;
-        color: #003049;
-        box-shadow: 4px 4px 4px 4px grey;
-    `
+    // const ResultBox = styled.div`
+    //     width:80%;
+    //     margin: auto;
+    //     padding: 10px;
+    //     background-color: lightgrey;
+    //     color: #003049;
+    //     box-shadow: 4px 4px 4px 4px grey;
+    // `
 
     const KeyWordRed = styled.div`
         color: #780000;
@@ -53,7 +53,7 @@ const Result = (props) => {
                 <br/>
                 You could have made 
 
-                <KeyWordRed><strong>{stock.currency}  {Math.round(((jimjimminy.amount/stock.minPrice)*stock.maxPrice - jimjimminy.amount)*100)/100}</strong></KeyWordRed>
+                <KeyWordRed><strong>{jimjimminy.currency}  {Math.round(((jimjimminy.amount/stock.minPrice)*stock.maxPrice - jimjimminy.amount)*100)/100}</strong></KeyWordRed>
             </p>
           
             </span>
@@ -65,7 +65,7 @@ const Result = (props) => {
 
 
     return (
-        <ResultBox>
+        <div class="container ml-10 sm:mx-auto m-10 bg-slate-100 p-5">
         <h2>If Only: </h2>
 
      
@@ -75,7 +75,7 @@ const Result = (props) => {
        
 
   
-        </ResultBox>
+        </div>
     );
 };
 

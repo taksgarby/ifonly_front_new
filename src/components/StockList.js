@@ -52,7 +52,7 @@ const StockList = ({  name, amount, currency }) => {
     <UserInfo>
     {/* <p class="welcome">Welcome { name } <br/>
     You have { amount } { currency } you could have invested</p> */}
-    <div className="font-mono text-2xl m-5">Welcome <span style={{color: 'blue'}}>
+    <div className="font-mono text-xl m-5">Welcome <span style={{color: 'blue'}}>
     <strong>{ name }</strong> </span>!<br/>
     You have  <span style={{color: 'blue'}}><strong>{ amount } { currency } </strong></span>you could have invested.<br/>
     Click to see how much you have missed out on &#128512;</div>
