@@ -44,18 +44,6 @@ const { id } = useParams()
     margin: 5px;
   `
 
-//  const getSelectedStock = (stock) => {
-//     setSelectedStock(stock)
-//     console.log(stock)
-//  }
-
-//   const onClick = () => {
-//     getSelectedStock();
-//     setShowResult(true);
-//   }
-
-
-
 
 
 

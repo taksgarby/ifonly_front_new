@@ -44,18 +44,16 @@ const Result = (props) => {
             <span>
                
                 <p>If you had only bought 
-                <KeyWordRed><strong> {stock.currency} {stock.amount} </strong></KeyWordRed>
+                <KeyWordRed><strong> {jimjimminy.currency} {jimjimminy.amount} </strong></KeyWordRed>
                 worth of 
                 <KeyWordBlue><strong>{stock.companyName} stock </strong></KeyWordBlue>
-                in <KeyWordBlue>{stock.minPriceDate}</KeyWordBlue> and sold it 
-                in <KeyWordBlue>{stock.maxPriceDate}</KeyWordBlue> ...
+                in <KeyWordBlue>{stock.minPriceDate}</KeyWordBlue> when the price was USD {stock.minPrice} 
+                <br/>and sold it 
+                in <KeyWordBlue>{stock.maxPriceDate}</KeyWordBlue> when the price was USD {stock.maxPrice}
                 <br/>
                 You could have made 
-            amount is {jimjimminy.amount}
-minPrice is {stock.minPrice}
-maxPrice is {stock.maxPrice}
 
-                <KeyWordRed><strong>{stock.currency}  {Math.round(((stock.amount/stock.minPrice)*stock.maxPrice - stock.amount)*100)/100}</strong></KeyWordRed>
+                <KeyWordRed><strong>{stock.currency}  {Math.round(((jimjimminy.amount/stock.minPrice)*stock.maxPrice - jimjimminy.amount)*100)/100}</strong></KeyWordRed>
             </p>
           
             </span>
@@ -73,7 +71,7 @@ maxPrice is {stock.maxPrice}
      
                 { resultComponents }
     
-            <p>Try another stock</p> } 
+            <p>Try another stock</p> 
        
 
   

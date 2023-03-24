@@ -27,13 +27,10 @@ const StockList = ({  name, amount, currency }) => {
     justify-content: space-around;
     `
 
-    // const stockComponents = ifOnlyStocks.map(stock => (
-    //   <Stock key={stock.id} stock={stock} name={name}  />
-    // ));
 
     const stockComponents = ifOnlyStocks.map(stock => {
         return (
-            <Stock key={stock.id} stock={stock} name={name}>
+            <Stock key={stock.id} stock={stock} >
                 <Link to = '/result'>
 
                 </Link>
