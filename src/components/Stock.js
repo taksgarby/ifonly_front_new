@@ -42,7 +42,7 @@ const { id } = useParams()
   `
 
   const StockImage = styled.image`
-    margin: 5px;
+    padding-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
   `
