@@ -9,54 +9,33 @@ const Result = (props) => {
     const location = useLocation()
     const { stock } = location.state
   
-  
-    // const ResultBox = styled.div`
-    //     width:80%;
-    //     margin: auto;
-    //     padding: 10px;
-    //     background-color: lightgrey;
-    //     color: #003049;
-    //     box-shadow: 4px 4px 4px 4px grey;
-    // `
 
-    const KeyWordRed = styled.div`
-        color: #780000;
-        padding: 0.5rem;
-    `
 
-    const KeyWordBlue = styled.div`
-        color: #03045e;
-        padding: 0.5rem;
-    `
 
-    const RemoveButton = styled.button `
-        background-color: #495057;
-        color: #fdf0d5;
-        margin: 5px;
-        padding: 5px;
-
-        border-radius: 8px;
-     `
 
     const resultComponents = 
-        <div>
-            <hr />
-            <span>
-               
-                <p>If you had only bought 
-                <KeyWordRed><strong> {jimjimminy.currency} {jimjimminy.amount} </strong></KeyWordRed>
-                worth of 
-                <KeyWordBlue><strong>{stock.companyName} stock </strong></KeyWordBlue>
-                in <KeyWordBlue>{stock.minPriceDate}</KeyWordBlue> when the price was USD {stock.minPrice} 
-                <br/>and sold it 
-                in <KeyWordBlue>{stock.maxPriceDate}</KeyWordBlue> when the price was USD {stock.maxPrice}
-                <br/>
-                You could have made 
-
-                <KeyWordRed><strong>{jimjimminy.currency}  {Math.round(((jimjimminy.amount/stock.minPrice)*stock.maxPrice - jimjimminy.amount)*100)/100}</strong></KeyWordRed>
+        // <div>
+        //     <hr />
+        //     <span>
+        <div className="container bg-gray-100 rounded shadow border p-8 m-10">
+            <p className="text-3xl text-gray-700 font-bold mb-5">
+                Sorry {jimjimminy.userName} ...
             </p>
+                <p className="text-bg-gray-500 text-left">If you had only bought: </p>
           
-            </span>
+                <p className="text-rose-700 mt-5 text-xl font-bold text-center">
+                    {jimjimminy.currency} {jimjimminy.amount} worth of {stock.companyName} stock </p>
+
+                <p className="text-blue-700 mt-5 mb-5 text-xl text-center font-bold">in {stock.minPriceDate}, when the price was USD {stock.minPrice} </p>
+                <p className="text-bg-gray-500 text-left">and sold it:</p>
+                <p className="text-blue-700 mt-5 mb-5 text-xl text-center font-bold">in {stock.maxPriceDate} when the price was USD {stock.maxPrice}</p>
+                
+                <p className="text-bg-gray-500 text-left">You could have made:</p>
+                <p className="text-3xl text-rose-700 font-bold mb-5">
+                {jimjimminy.currency}  {Math.round(((jimjimminy.amount/stock.minPrice)*stock.maxPrice - jimjimminy.amount)*100)/100}
+                </p>
+          
+        
 
 
         </div >
@@ -65,17 +44,11 @@ const Result = (props) => {
 
 
     return (
-        <div class="container ml-10 sm:mx-auto m-10 bg-slate-100 p-5">
-        <h2>If Only: </h2>
 
-     
+     <>
                 { resultComponents }
     
-            <p>Try another stock</p> 
-       
-
-  
-        </div>
+                </>
     );
 };
 

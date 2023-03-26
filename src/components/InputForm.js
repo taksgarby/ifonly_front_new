@@ -31,9 +31,7 @@ const InputForm = (props) => {
     const handleFormSubmit = (evt) => {
         evt.preventDefault();
 
-        // if (amount && name){
-        //       return <StockList name = {name} amount = {amount} currency = {currency} />
-        //     }
+    
         const userQueryData = {
           userName: name,
           amount: amount,
@@ -43,8 +41,7 @@ const InputForm = (props) => {
         props.OnSaveUserQueryData(userQueryData);
         console.log(userQueryData);
         setFormSubmitted(true);
-        // navigate('/welcome', {name, amount, currency});
-  
+
      }
 
 
