@@ -56,7 +56,7 @@ const InputForm = (props) => {
         dark:first-letter:text-gray-100 text-4xl ">
         Welcome to If Only App 
         </p>
-        <p class="pl-6 pr-6 text-left text-gray-800 text-3xl dark:text-gray-400">
+        <p class="pl-7 pr-7 text-left text-gray-800 text-3xl dark:text-gray-400">
          If you recreationally lament on things you could have done but did not, 
         this app is for you! <br></br>  
         Simply type in your name and the amount of money of your chosen currency that you had in your bank, 
@@ -68,8 +68,8 @@ const InputForm = (props) => {
       <div className="relative flex flex-row flex-nowrap justify-center 
        mt-10 mb-5">
 
-      <div className="mr-3">
-        <label htmlFor="name" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">
+      <div className="mr-4">
+        <label htmlFor="name" class="block mb-2 text-xl font-medium text-gray-900 dark:text-white">
           Your Name
         </label>
       
@@ -80,8 +80,8 @@ const InputForm = (props) => {
         </input>
       </div>
 
-      <div class="mr-3">
-        <label htmlFor="amount" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">
+      <div class="mr-4">
+        <label htmlFor="amount" class="block mb-2 text-xl font-medium text-gray-900 dark:text-white">
           Amount
         </label>
         <input type="number" id="amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
@@ -92,8 +92,8 @@ const InputForm = (props) => {
         </input>
       </div>
 
-      <div className="mr-3">
-        <label htmlFor="currency" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">
+      <div className="mr-4">
+        <label htmlFor="currency" class="block mb-2 text-xl font-medium text-gray-900 dark:text-white">
           Currency
         </label>
         
