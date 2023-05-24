@@ -48,15 +48,15 @@ const InputForm = (props) => {
 
       <div className="mt-10 ml-10 pt-10 pl-10">
       
-      <div className='pl-5'>
+      <div className='p-5 bg-transparent/20 rounded-lg'>
    
-        <p class="font-bold mb-3 text-gray-900 dark:text-gray-400 
+        <p class="font-bold mb-3 text-white dark:text-gray-400 
         first-line:uppercase 
         first-line:tracking-widest 
         dark:first-letter:text-gray-100 text-4xl ">
-        Welcome to If Only App 
+        Welcome!
         </p>
-        <p class="pl-7 pr-7 text-left text-gray-800 text-3xl dark:text-gray-400">
+        <p class="pl-7 pr-7 text-left text-white text-3xl dark:text-gray-400">
          If you recreationally lament on things you could have done but did not, 
         this app is for you! <br></br>  
         Simply type in your name and the amount of money of your chosen currency that you had in your bank, 
